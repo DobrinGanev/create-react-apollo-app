@@ -1,31 +1,9 @@
 {
     "presets": [
-        "react",
-        [
-            "env",
-            {
-                "modules": false
-            }
-        ]
+        "es2015",
+        "react"
     ],
     "plugins": [
-        "react-hot-loader/babel",
-        "babel-plugin-transform-object-rest-spread"
-    ],
-    "env": {
-        "test": {
-            "presets": [
-                "react",
-                [
-                    "env",
-                    {
-                        "modules": "commonjs"
-                    }
-                ]
-            ],
-            "plugins": [
-                "transform-es2015-modules-commonjs"
-            ]
-        }
-    }
+        "react-hot-loader/babel"
+    ]
 }
