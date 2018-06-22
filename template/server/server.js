@@ -1,8 +1,8 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express'
-import { graphql, buildSchema } from 'graphql'
-import { POINT_CONVERSION_COMPRESSED } from 'constants';
+import { buildSchema } from 'graphql'
+// import { POINT_CONVERSION_COMPRESSED } from 'constants';
 
 
 const schema = buildSchema(`
@@ -10,6 +10,7 @@ const schema = buildSchema(`
     greeting(name: String): String
   }
 `)
+console.log()
 
 const app = express()
 
