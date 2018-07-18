@@ -4,7 +4,10 @@ const fs = require('fs-extra')
 const path = require('path')
 const { exec } = require('child_process')
 const packageJson = require('../package.json')
-const scripts = `"start": "webpack-dev-server --hot"`
+const scripts =
+    `"start:server": "rm -rf ./build && webpack --config webpack.config.server.js",
+     "start:client": "webpack-dev-server --config webpack.config.client.js",
+     "start": "rm -rf ./.build && npm-run-all --parallel start:server start:client"`
 
 const getDeps = deps => {
     return Object.entries(deps)
@@ -25,14 +28,15 @@ exec(`mkdir ${process.argv[2]} && cd ${process.argv[2]} && npm init -f`, initErr
     }
     const packageJSON = `${process.argv[2]}/package.json`
     fs.readFile(packageJSON, (err, file) => {
-        if (err) { throw err }
+        if (err) {
+            throw err
+        }
         const data = file.toString()
             .replace('"test": "echo \\"Error: no test specified\\" && exit 1"', scripts)
-        // .replace('"license": "ISC"', jestConfig);
         fs.writeFile(packageJSON, data, err2 => err2 || true)
     })
 
-    const filesToCopy = ['README.md', 'webpack.config.js', '.eslintrc', '.babelrc']
+    const filesToCopy = ['README.md', 'webpack.config.server.js', 'webpack.config.client.js', '.eslintrc', '.babelrc']
 
     for (let i = 0; i < filesToCopy.length; i += 1) {
         fs.createReadStream(path.join(__dirname, `../${filesToCopy[i]}`))
@@ -40,11 +44,12 @@ exec(`mkdir ${process.argv[2]} && cd ${process.argv[2]} && npm init -f`, initErr
     }
 
     // installing dependencies
-    console.log('Installing packages. This might take a couple of minutes.');
+    console.log('Installing packages. This might take a couple of minutes.')
     const devDeps = getDeps(packageJson.devDependencies);
     const deps = getDeps(packageJson.dependencies);
-    exec(`cd ${process.argv[2]} && npm i -D ${devDeps} && npm i -S ${deps}`,
-        (npmErr) => {
+    exec(`cd ${process.argv[2]} 
+         && npm i -D ${devDeps}
+        && npm i -S ${deps}`, (npmErr) => {
             if (npmErr) {
                 console.error(`npm error ${npmErr}`)
                 return
@@ -59,6 +64,5 @@ exec(`mkdir ${process.argv[2]} && cd ${process.argv[2]} && npm init -f`, initErr
                          folder, refer to the README for the project structure.\nHappy Coding!`))
                 .catch(err => console.error(err));
         },
-    );
-},
-);
+    )
+})

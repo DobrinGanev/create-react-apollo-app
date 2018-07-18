@@ -4,5 +4,7 @@ import App from './App'
 
 const root = document.createElement('div')
 document.body.appendChild(root)
-
+if (module.hot) {
+    module.hot.accept();
+}
 render(<App />, root)

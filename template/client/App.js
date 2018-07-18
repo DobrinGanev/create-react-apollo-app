@@ -4,9 +4,11 @@ import Counter from './Counter'
 
 const App = () => (
     <h1>
-        Hello, world <br />
+        Hello  <br />
         <Counter />
     </h1>
 )
-
+if (module.hot) {
+    module.hot.accept()
+}
 export default hot(module)(App)

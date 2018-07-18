@@ -19,5 +19,5 @@ module.exports = {
             },
         ],
     },
-    plugins: [new HtmlWebpackPlugin(), new webpack.NamedModulesPlugin()],
+    plugins: [new HtmlWebpackPlugin(), new webpack.NamedModulesPlugin(), new webpack.HotModuleReplacementPlugin()],
 }
