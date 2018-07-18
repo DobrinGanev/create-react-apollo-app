@@ -3,7 +3,7 @@ import app from "./server"
 
 const server = http.createServer(app)
 let currentApp = app
-const PORT = 3000
+const PORT = 5000
 server.listen(PORT, () => console.log(`express server listening on ${PORT}`))
 
 if (module.hot) {

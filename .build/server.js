@@ -21,7 +21,11 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
+<<<<<<< HEAD
 /******/ 	var hotCurrentHash = "65a905363f623d29174d"; // eslint-disable-line no-unused-vars
+=======
+/******/ 	var hotCurrentHash = "ba00f3b2820d3fae2e71"; // eslint-disable-line no-unused-vars
+>>>>>>> 234f46a7f2c94815f050f4914ffc5bc798cf3d17
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -801,7 +805,7 @@ eval("/* WEBPACK VAR INJECTION */(function(__resourceQuery) {/*\n\tMIT License h
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(module) {\n\nvar _http = __webpack_require__(/*! http */ \"http\");\n\nvar _http2 = _interopRequireDefault(_http);\n\nvar _server = __webpack_require__(/*! ./server */ \"./template/server/server.js\");\n\nvar _server2 = _interopRequireDefault(_server);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n    var enterModule = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").enterModule;\n\n    enterModule && enterModule(module);\n})();\n\nvar server = _http2.default.createServer(_server2.default);\nvar currentApp = _server2.default;\nvar PORT = 3000;\nserver.listen(PORT, function () {\n    return console.log(\"express server listening on \" + PORT);\n});\n\nif (true) {\n    module.hot.accept(/*! ./server */ \"./template/server/server.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {\n        server.removeListener(\"request\", currentApp);\n        server.on(\"request\", _server2.default);\n        currentApp = _server2.default;\n    })(__WEBPACK_OUTDATED_DEPENDENCIES__); });\n}\n;\n\n(function () {\n    var reactHotLoader = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").default;\n\n    var leaveModule = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").leaveModule;\n\n    if (!reactHotLoader) {\n        return;\n    }\n\n    reactHotLoader.register(server, \"server\", \"/home/dobrin/create-react-apollo-app/template/server/index.js\");\n    reactHotLoader.register(currentApp, \"currentApp\", \"/home/dobrin/create-react-apollo-app/template/server/index.js\");\n    reactHotLoader.register(PORT, \"PORT\", \"/home/dobrin/create-react-apollo-app/template/server/index.js\");\n    leaveModule(module);\n})();\n\n;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/module.js */ \"./node_modules/webpack/buildin/module.js\")(module)))\n\n//# sourceURL=webpack:///./template/server/index.js?");
+eval("/* WEBPACK VAR INJECTION */(function(module) {\n\nvar _http = __webpack_require__(/*! http */ \"http\");\n\nvar _http2 = _interopRequireDefault(_http);\n\nvar _server = __webpack_require__(/*! ./server */ \"./template/server/server.js\");\n\nvar _server2 = _interopRequireDefault(_server);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n    var enterModule = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").enterModule;\n\n    enterModule && enterModule(module);\n})();\n\nvar server = _http2.default.createServer(_server2.default);\nvar currentApp = _server2.default;\nvar PORT = 5000;\nserver.listen(PORT, function () {\n    return console.log(\"express server listening on \" + PORT);\n});\n\nif (true) {\n    module.hot.accept(/*! ./server */ \"./template/server/server.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {\n        server.removeListener(\"request\", currentApp);\n        server.on(\"request\", _server2.default);\n        currentApp = _server2.default;\n    })(__WEBPACK_OUTDATED_DEPENDENCIES__); });\n}\n;\n\n(function () {\n    var reactHotLoader = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").default;\n\n    var leaveModule = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").leaveModule;\n\n    if (!reactHotLoader) {\n        return;\n    }\n\n    reactHotLoader.register(server, \"server\", \"/home/dobrin/create-react-apollo-app/template/server/index.js\");\n    reactHotLoader.register(currentApp, \"currentApp\", \"/home/dobrin/create-react-apollo-app/template/server/index.js\");\n    reactHotLoader.register(PORT, \"PORT\", \"/home/dobrin/create-react-apollo-app/template/server/index.js\");\n    leaveModule(module);\n})();\n\n;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/module.js */ \"./node_modules/webpack/buildin/module.js\")(module)))\n\n//# sourceURL=webpack:///./template/server/index.js?");
 
 /***/ }),
 
@@ -813,7 +817,11 @@ eval("/* WEBPACK VAR INJECTION */(function(module) {\n\nvar _http = __webpack_re
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 eval("/* WEBPACK VAR INJECTION */(function(module) {\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _templateObject = _taggedTemplateLiteral(['\\n  type Query {\\n    hello: String\\n  }\\n'], ['\\n  type Query {\\n    hello: String\\n  }\\n']);\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _apolloServerExpress = __webpack_require__(/*! apollo-server-express */ \"apollo-server-express\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n  var enterModule = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\n// Construct a schema, using GraphQL schema language\nvar typeDefs = (0, _apolloServerExpress.gql)(_templateObject);\n\n// Provide resolver functions for your schema fields\nvar resolvers = {\n  Query: {\n    hello: function hello() {\n      return 'Hello world!';\n    }\n  }\n};\n\nvar server = new _apolloServerExpress.ApolloServer({\n  typeDefs: typeDefs,\n  resolvers: resolvers,\n  playground: {\n    settings: {\n      'editor.theme': 'light',\n      'editor.cursorShape': 'block'\n    }\n  }\n});\n\nvar app = (0, _express2.default)();\nserver.applyMiddleware({ app: app });\n\nvar _default = app;\nexports.default = _default;\n;\n\n(function () {\n  var reactHotLoader = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").default;\n\n  var leaveModule = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(typeDefs, 'typeDefs', '/home/dobrin/create-react-apollo-app/template/server/server.js');\n  reactHotLoader.register(resolvers, 'resolvers', '/home/dobrin/create-react-apollo-app/template/server/server.js');\n  reactHotLoader.register(server, 'server', '/home/dobrin/create-react-apollo-app/template/server/server.js');\n  reactHotLoader.register(app, 'app', '/home/dobrin/create-react-apollo-app/template/server/server.js');\n  reactHotLoader.register(_default, 'default', '/home/dobrin/create-react-apollo-app/template/server/server.js');\n  leaveModule(module);\n})();\n\n;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/module.js */ \"./node_modules/webpack/buildin/module.js\")(module)))\n\n//# sourceURL=webpack:///./template/server/server.js?");
+=======
+eval("/* WEBPACK VAR INJECTION */(function(module) {\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _bodyParser = __webpack_require__(/*! body-parser */ \"body-parser\");\n\nvar _bodyParser2 = _interopRequireDefault(_bodyParser);\n\nvar _apolloServerExpress = __webpack_require__(/*! apollo-server-express */ \"apollo-server-express\");\n\nvar _graphql = __webpack_require__(/*! graphql */ \"graphql\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n  var enterModule = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").enterModule;\n\n  enterModule && enterModule(module);\n})();\n\n// import { POINT_CONVERSION_COMPRESSED } from 'constants';\n\n\nvar schema = (0, _graphql.buildSchema)('\\n  type Query {\\n    greeting(name: String): String\\n  }\\n');\nconsole.log();\n\nvar app = (0, _express2.default)();\n\n// bodyParser is needed just for POST.\napp.use('/graphql', _bodyParser2.default.json(), (0, _apolloServerExpress.graphqlExpress)({ schema: schema }));\napp.get('/graphiql', (0, _apolloServerExpress.graphiqlExpress)({ endpointURL: '/graphql' })); // if you want GraphiQL enabled\n\nvar _default = app;\nexports.default = _default;\n;\n\n(function () {\n  var reactHotLoader = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").default;\n\n  var leaveModule = __webpack_require__(/*! react-hot-loader */ \"react-hot-loader\").leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(schema, 'schema', '/home/dobrin/create-react-apollo-app/template/server/server.js');\n  reactHotLoader.register(app, 'app', '/home/dobrin/create-react-apollo-app/template/server/server.js');\n  reactHotLoader.register(_default, 'default', '/home/dobrin/create-react-apollo-app/template/server/server.js');\n  leaveModule(module);\n})();\n\n;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/module.js */ \"./node_modules/webpack/buildin/module.js\")(module)))\n\n//# sourceURL=webpack:///./template/server/server.js?");
+>>>>>>> 234f46a7f2c94815f050f4914ffc5bc798cf3d17
 
 /***/ }),
 
@@ -839,6 +847,20 @@ eval("module.exports = require(\"apollo-server-express\");\n\n//# sourceURL=webp
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "body-parser":
+/*!******************************!*\
+  !*** external "body-parser" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"body-parser\");\n\n//# sourceURL=webpack:///external_%22body-parser%22?");
+
+/***/ }),
+
+>>>>>>> 234f46a7f2c94815f050f4914ffc5bc798cf3d17
 /***/ "express":
 /*!**************************!*\
   !*** external "express" ***!

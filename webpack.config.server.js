@@ -1,3 +1,4 @@
+/* eslint-disable */
 const webpack = require('webpack')
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
@@ -15,11 +16,18 @@ module.exports = {
         whitelist: ['webpack/hot/poll?1000']
     })],
     module: {
-        rules: [{
-            test: /\.js?$/,
-            use: 'babel-loader',
-            exclude: /node_modules/
-        }]
+        rules: [
+            {
+                exclude: /node_modules|packages/,
+                test: /\.js$/,
+                use: 'babel-loader',
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['eslint-loader']
+              }
+        ],
     },
     plugins: [
         new StartServerPlugin("server.js"),
@@ -35,5 +43,5 @@ module.exports = {
     output: {
         path: path.join(__dirname, '.build'),
         filename: 'server.js'
-    },
+    }
 }
