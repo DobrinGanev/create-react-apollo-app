@@ -1,14 +1,15 @@
-import React from 'react'
-import { hot } from 'react-hot-loader'
-import Counter from './Counter'
+import React, { Component } from 'react'
 
-const App = () => (
-    <h1>
-        Hello  <br />
-        <Counter />
-    </h1>
-)
-if (module.hot) {
-    module.hot.accept()
+import PostViewer from './PostViewer'
+
+class App extends Component {
+  render () {
+    return (
+      <main>
+        <PostViewer />
+      </main>
+    )
+  }
 }
-export default hot(module)(App)
+
+export default App

@@ -1,15 +1,19 @@
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
+import { ApolloProvider } from 'react-apollo'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App'
+import * as serviceWorker from './serviceWorker'
+import client from './apollo'
 
-const root = document.createElement('div')
-document.body.appendChild(root)
-<<<<<<< HEAD
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+)
+serviceWorker.unregister()
 if (module.hot) {
-    module.hot.accept();
+  module.hot.accept()
 }
-render(<App />, root)
-=======
-
-render(<App/>, root)
->>>>>>> 234f46a7f2c94815f050f4914ffc5bc798cf3d17
